@@ -1,0 +1,86 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'bookingapp/CSS/bootstrap.min.css' %}">
+
+</head>
+<body>
+    <div>
+        <div id="header">
+            <a href="index.aspx"><img class="headerimg" src="{% static 'pics/R.jpg' %}" /></a>
+            <div class="headerp">Outpatient Clinics</div><br /><br /><br />
+            <ul>
+                <li>
+                    <a  href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="makeV.html">Booking</a>
+                </li>
+                <li>
+                    <a href="Doctors.html">Doctors</a>
+                </li>
+                <li>
+                    <a href="Clinics.html">Clinics</a>
+                </li>
+                <li>
+                    <a href="Buildings.html">Buildings</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="allbooking.html">All Booking</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="adddoctor.html">Add doctor</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="addbuilding.html">Add Building</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="addclinic.html">Add Clinic</a>
+                </li>
+
+            </ul>
+            <div class="jumbotron text-center text-muted">
+                <h1> All Doctors In The Hospital</h1>
+            </div>
+        </div><center>
+                  <div>
+                    <div class="container ">
+                        <div class="row">
+                     {% for dept in doctors %}    
+                            <div class="col-sm-4">
+                              <h2> Dr : {{dept.name}}  </h2>
+                              <hr class="my-1">
+                              <h6 > Phone : {{dept.phone}} </h6>
+                              <h6 style="color:rgb(29, 114, 167)"> Speciality: {{dept.speciality}} </h6>
+                              <h6> Start Time : {{dept.start_time}} </h6>
+                              <h6> End Time : {{dept.end_time}} </h6>
+                              <h6> Attendance Day : {{dept.attendance_day}} </h6>
+                              
+                 
+                             </div>
+                     {% endfor %}
+                         </div>
+                  </div>
+                  
+        </center><br /><br />
+        <hr/>
+        <div class="container">
+            <a href="{% url 'add_doctor' %}" class="btn btn-danger">
+                Add Doctor
+            </a>
+       
+        </div>
+    </div>
+        <div id="footer">
+            <div>
+                <p>
+                    <span>Banisuef University Hospital </span>
+                </p>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+
+</head>
+<body>
+    <div id="MAXid">
+        <div>
+            <div id="header">
+                <a href="index.html"><img class="headerimg" src="{% static 'pics/R.jpg' %}" /></a>
+                <div class="headerp">Outpatient Clinics</div><br /><br /><br />
+                <ul>
+                    <li>
+                        <a  href="index.html">home</a>
+                    </li>
+                    <li>
+                        <a href="makeV.html">Booking</a>
+                    </li>
+                    <li>
+                        <a href="Doctors.html">Doctors</a>
+                    </li>
+                    <li>
+                        <a href="Clinics.html">Clinics</a>
+                    </li>
+                    <li>
+                        <a href="Buildings.html">Buildings</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="allbooking.html">All Bookings</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="adddoctor.html">Add doctor</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="addbuilding.html">Add Building</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="addclinic.html">Add Clinic</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="WebDesign">
+            <div id="form3">
+                <div class="column">
+                    <form id="f" action="">
+                        <center>
+                            <br /><br />
+                            <label for="fname">message</label><br />
+                            <textarea id="subject" name="subject" placeholder="Write the message.."></textarea><br /><br />
+                            <label for="lname">Phone</label><br />
+                            <input type="text" id="lname" name="lastname" placeholder="Enter Phone.."><br /><br />
+                            <button id="print">Send</button>
+
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div><br /><br /><br />
+        <div id="footer">
+            <div>
+                <p>
+                    <span>Banisuef University Hospital </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

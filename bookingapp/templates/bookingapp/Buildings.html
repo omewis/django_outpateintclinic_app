@@ -1,0 +1,77 @@
+﻿{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'bookingapp/CSS/bootstrap.min.css' %}">
+
+</head>
+<body>
+    <div>
+        <div id="header">
+            <a href="index.aspx"><img class="headerimg" src="{% static 'pics/R.jpg' %}" /></a>
+            <div class="headerp">Outpatient Clinics</div><br /><br /><br />
+            <ul>
+                <li>
+                    <a  href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="makeV.html">Booking</a>
+                </li>
+                <li>
+                    <a href="Doctors.html">Doctors</a>
+                </li>
+                <li>
+                    <a href="Clinics.html">Clinics</a>
+                </li>
+                <li>
+                    <a href="Buildings.html">Buildings</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="allbooking.html">All Booking</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="adddoctor.html">Add doctor</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="addbuilding.html">Add Building</a>
+                </li>
+                <li>
+                    <a style="color:black ;" href="addclinic.html">Add Clinic</a>
+                </li>
+
+            </ul>
+
+        </div>
+        <center>
+            <div class="jumbotron text-center text-muted">
+                <h1> All Buildings In The Hospital</h1>
+            </div>
+           {% for dept in building %}
+            <button class="Bprices">
+                <a>
+                    <img style="width:80px;height:90px;" src="{% static 'pics/build.png' %}" />
+                </a>
+                <p class="Pprices"><br />{{dept.num}}<br />Clinic Name:{{dept.information}}<br /><br /></p>
+            </button>
+            {% endfor %}
+        </center>
+    </div>  
+    <div class="container">
+        <a href="{% url 'add_building' %}" class="btn btn-danger">
+            Add Buildings </a>
+                </div>
+        
+</div>
+    
+    <div id="footer">
+        <div>
+            <p>
+                <span>Banisuef University Hospital </span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

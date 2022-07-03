@@ -1,0 +1,71 @@
+﻿{% load static %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+    </head>
+    <body>
+
+        <div>
+            <div id="header">
+                <a href="index.html"><img class="headerimg" src="{% static 'pics/R.jpg' %}" /></a>
+                <div class="headerp">Outpatient Clinics</div><br /><br /><br />
+                <ul>
+                    <li>
+                        <a  href="index.html">home</a>
+                    </li>
+                    <li>
+                        <a href="makeV.html">Booking</a>
+                    </li>
+                    <li>
+                        <a href="Doctors.html">Doctors</a>
+                    </li>
+                    <li>
+                        <a href="Clinics.html">Clinics</a>
+                    </li>
+                    <li>
+                        <a href="Buildings.html">Buildings</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="listallbooking.html">All Bookings</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="adddoctor.html">Add doctor</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="addbuilding.html">Add Building</a>
+                    </li>
+                    <li>
+                        <a style="color:black ;" href="addclinic.html">Add Clinic</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <center>
+                <div id="section">
+                </div>
+            </center><br />
+                     <center>
+                         <button style="width:40%" class="Bprices">
+                             <a href="makeV.html">
+                                 <img style="width:80px;height:90px;" src="{% static 'pics/Medical_document-512.png' %}" />
+                             </a>
+
+                             <p style="font-weight:bold ;" class="Pprices"><br />Book a visit<br /><br /></p>
+                         </button>
+                        
+                     </center>
+
+        </div>
+        <div id="footer">
+            <div>
+                <p>
+                    <span>Banisuef University Hospital </span>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

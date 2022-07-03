@@ -1,0 +1,34 @@
+{% extends 'bookingapp/allbooking.html'%}
+{% csrf_token %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">  
+    <ol class="breadcrumb">
+      <li class="breadcrumd-item font-weight-bold">
+        <div class="container">
+          <a href="{% url 'Clinics' %}" > All clinics
+               </a> 
+       </div>
+      </li>
+    </ol>
+      <form  action="addclinic.html" method="post">
+         <center></center>
+         <br /><br />
+              {% csrf_token %}
+              {{ form | crispy }}
+              <input type="submit" value="Add clinic">
+          </center>
+      </form>
+  </div>
+</div>
+</div><br /><br /><br />
+
+<hr/>
+ <div class="container">
+     <a href="{% url 'add_clinic' %}" class="btn btn-danger">
+         Add New clinic
+     </a>
+
+ </div>
+
+{% endblock %}

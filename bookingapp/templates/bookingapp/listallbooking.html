@@ -1,0 +1,31 @@
+{% extends 'bookingapp/allbooking.html'%}
+{% block content %}
+ <div class="jumbotron text-center text-muted">
+     <h1> All Booking In The Hospital</h1>
+ </div>
+
+ <div class="container ">
+       <div class="row">
+    {% for dept in Booking %}    
+           <div class="col-sm-4">
+             <h4> {{dept.first_name}} {{dept.last_name}} </h4>
+             <hr class="my-1">
+             <h6> {{dept.phone}} </h6>
+             <h6> {{dept.speciality}} </h6>
+             <h6> {{dept.available_time}} </h6>
+             
+
+            </div>
+    {% endfor %}
+        </div>
+
+ </div>
+<hr/>
+ <div class="container">
+     <a href="{% url 'add_new_booking' %}" class="btn btn-danger">
+         Add New Booking
+     </a>
+
+ </div>
+
+{% endblock %}
